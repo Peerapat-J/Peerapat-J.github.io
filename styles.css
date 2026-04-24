@@ -1,0 +1,102 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f0efef;
+  --text: #000;
+  --link: #007acc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Merriweather", Georgia, serif;
+  font-size: 16px;
+  line-height: 1.75;
+  font-weight: 400;
+  font-kerning: normal;
+  word-wrap: break-word;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  box-shadow: 0 1px 0 0 currentColor;
+}
+
+a:hover {
+  box-shadow: none;
+}
+
+.page {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 4rem 1.3125rem 2.625rem;
+}
+
+h1,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 1.75rem;
+  color: inherit;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.4427rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.1;
+  text-rendering: optimizeLegibility;
+}
+
+h2 {
+  margin-top: 2.625rem;
+  margin-bottom: 1.75rem;
+  color: inherit;
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+section {
+  padding: 0;
+}
+
+p,
+li {
+  margin-bottom: 1.75rem;
+}
+
+ol {
+  margin: 0 0 1.75rem 1.75rem;
+  padding: 0;
+}
+
+li {
+  min-height: 1.75rem;
+  padding-left: 0.35rem;
+}
+
+@media (max-width: 560px) {
+  .page {
+    padding-right: 1.3125rem;
+    padding-left: 1.3125rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #222;
+    --text: #d3d3d3;
+    --link: #add8e6;
+  }
+}
