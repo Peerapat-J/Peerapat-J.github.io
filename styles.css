@@ -143,12 +143,41 @@ li {
   overflow: auto;
   margin: 0;
   padding: 1.25rem;
+  color: color-mix(in srgb, var(--text) 76%, transparent);
   font-family: "Courier New", ui-monospace, SFMono-Regular, Menlo, Consolas,
     monospace;
   font-size: clamp(0.42rem, 0.86vw, 0.72rem);
   line-height: 1.08;
   text-align: center;
   white-space: pre;
+}
+
+.ascii-hair {
+  color: #FF84C6;
+}
+
+.ascii-exclamation {
+  color: #ffd84d;
+}
+
+.ascii-fire {
+  color: #ff5a5a;
+}
+
+.ascii-cloth {
+  color: #006039;
+}
+
+.ascii-skin {
+  color: #FDFBD4;
+}
+
+.ascii-eyes {
+  color: #ADE4F4;
+}
+
+.ascii-table {
+  color: #895129;
 }
 
 .status-note {
