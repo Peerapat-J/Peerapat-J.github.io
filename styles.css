@@ -36,16 +36,32 @@ a:hover {
 }
 
 .page {
-  max-width: 42rem;
   margin: 0 auto;
-  padding: 4rem 1.3125rem 2.625rem;
+  padding: 1rem;
+  width: min(100%, 116rem);
 }
 
 .home {
-  min-height: calc(100svh - 9rem);
+  min-height: 100svh;
   display: grid;
   align-content: center;
-  gap: 2.625rem;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.site-name {
+  margin: 0 0 0.35rem;
+  color: color-mix(in srgb, var(--text) 72%, transparent);
+  font-family: Montserrat, sans-serif;
+  font-size: 1.4427rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.status {
+  max-width: 32rem;
+  text-align: center;
 }
 
 h1,
@@ -54,14 +70,25 @@ p {
 }
 
 h1 {
-  margin-bottom: 1.75rem;
+  margin-bottom: 0;
   color: inherit;
   font-family: Montserrat, sans-serif;
-  font-size: 1.4427rem;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0;
   line-height: 1.1;
   text-rendering: optimizeLegibility;
+}
+
+.typewriter span {
+  display: inline-block;
+  max-width: 0;
+  overflow: hidden;
+  border-right: 0.08em solid currentColor;
+  animation:
+    type-title 26s steps(36, end) infinite,
+    cursor 0.8s step-end infinite;
+  white-space: pre;
 }
 
 h2 {
@@ -79,14 +106,13 @@ section {
 }
 
 .eyebrow {
-  margin-bottom: 0.875rem;
+  margin-bottom: 0;
   color: color-mix(in srgb, var(--text) 62%, transparent);
   font-family: Montserrat, sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
   line-height: 1.2;
-  text-transform: uppercase;
 }
 
 p,
@@ -105,6 +131,7 @@ li {
 }
 
 .terminal-preview {
+  width: min(100%, 52rem);
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--text) 16%, transparent);
   border-radius: 8px;
@@ -114,24 +141,45 @@ li {
 .terminal-preview pre {
   overflow: auto;
   margin: 0;
-  padding: 1.3125rem;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: clamp(0.75rem, 2.2vw, 1rem);
+  padding: 1.25rem;
+  font-family: "Courier New", ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
+  font-size: clamp(0.48rem, 1vw, 0.82rem);
   line-height: 1.08;
+  text-align: center;
   white-space: pre;
 }
 
-.site-footer {
-  max-width: 42rem;
-  margin: 0 auto;
-  padding: 0 1.3125rem 2.625rem;
+.status-note {
+  margin: 0;
   color: color-mix(in srgb, var(--text) 62%, transparent);
-  font-size: 0.8125rem;
-  line-height: 1.6;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  white-space: pre;
 }
 
-.site-footer p {
-  margin-bottom: 0;
+@keyframes type-title {
+  0% {
+    max-width: 0;
+  }
+
+  12%,
+  92% {
+    max-width: 42ch;
+  }
+
+  100% {
+    max-width: 0;
+  }
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
 }
 
 @media (max-width: 560px) {
